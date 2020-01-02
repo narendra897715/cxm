@@ -1,0 +1,22 @@
+.class1 {
+    color:#fff;
+}
+
+.class2 {
+    color:black  !important;
+}
+
+.active {
+    color: orange !important;
+}
+
+.stickyheader {
+    position:fixed;
+    background-color: rgb(203, 233, 247) !important;
+    color:black !important;
+    top:0; 
+    width:100%;
+    z-index: 1;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: 1s;
+  }
