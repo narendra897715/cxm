@@ -8,6 +8,9 @@ body,
     margin: 0;
     font-family:robonto;
 }
+p {
+  text-align:justify;
+}
 h1 {font-size:1rem;}
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {  
