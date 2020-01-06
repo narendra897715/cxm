@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   @ViewChild("cxmheader", {static: false}) cxmheaderView: ElementRef;
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
     this.myFunction()
+   
   } 
   sticky: number = 0;
   ngAfterViewInit(){
