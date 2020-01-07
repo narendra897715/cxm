@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark text-center pt-3" #cxmheader >
+<nav class="navbar navbar-expand-sm navbar-dark text-center" #cxmheader [ngClass]="{'header-border': currentRouteName !=='/home'}">
     <a class="navbar-brand d-block d-sm-none" href="#"><img src="assets/CXMPrime_Logo.png" alt="logo"
       style="width: 100px;height: auto;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

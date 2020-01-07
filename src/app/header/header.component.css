@@ -1,13 +1,20 @@
 .class1 {
     color:#fff;
+    font-weight: bold;
 }
 
 .class2 {
     color:black  !important;
+    font-weight: bold;
 }
 
 .active {
-    color: orange !important;
+    color: #F93E4C !important;
+    font-weight: bold;
+}
+
+.header-border {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2)
 }
 
 .stickyheader {
