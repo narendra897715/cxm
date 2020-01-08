@@ -16,7 +16,12 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   ngAfterViewInit(){
 
     console.log(this.cxmheaderView);
-  
+    var hamburger1 = this.cxmheaderView.nativeElement.children[1].children[0];
+    if(this.currentRouteName === '/home') {
+      hamburger1.style.color = 'white';
+     } else {
+      hamburger1.style.color = 'black';
+     }
 
   }
   constructor(private router: Router) { }
@@ -24,6 +29,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   ngOnInit() {
     this.currentRouteName = this.router.url;
     console.log(this.currentRouteName);
+   
   }
 
   // window.onscroll = () => {
@@ -36,7 +42,8 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 myFunction()  {
   this.sticky = this.cxmheaderView.nativeElement.offsetTop;
     var childheader = this.cxmheaderView.nativeElement.children[2].children[0].children;
-   
+   var hamburger = this.cxmheaderView.nativeElement.children[1].children[0];
+   hamburger.style.color = 'black';
   if (window.pageYOffset > this.sticky) {
     //   var chilheader = header.children;
     //   console.log(chilheader[0].children)[0].children;
@@ -47,6 +54,7 @@ myFunction()  {
             subchild.style.color = 'black';
           }
      }
+    
      
      this.cxmheaderView.nativeElement.classList.add("stickyheader");
   } else {
@@ -56,6 +64,9 @@ myFunction()  {
             subchild.style.color = 'white';
           }
      }
+     if(this.currentRouteName === '/home') {
+      hamburger.style.color = 'white';
+     } 
      this.cxmheaderView.nativeElement.classList.remove("stickyheader");
   }
 }
